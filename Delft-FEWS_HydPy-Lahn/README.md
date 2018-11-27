@@ -21,3 +21,8 @@ Setup (typical setup of a Delft-FEWS instance):
 * adapt the INI file (_`FewsDemo_HydPy_Lahn_xVV.ini`)  
   * `vm.location`: path pointing to Java installation to be used
   * further adaptions if wanted
+
+## DELFT-FEWS configuration overview:
+* time series data for import are provided in `ImportBackup` (01/01/2008 - 31/12/2012) 
+* available workflows: importTimeSeries, runUpdateLahnH and runForecastLahnH 
+* macro DemoLahnH bundles the workflows
