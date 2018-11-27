@@ -2,13 +2,16 @@
 
 Delft-FEWS sample configuration for a HydPy model at the river Lahn in Germany.
 
+TODO: Info über Projekthistorie + BfG!
+TODO: info, wie man tatsächlich an FEWS kommt
+
 ![Lahn overview](./_images/01_overview.png)
 
 
 ## Getting started
 Prerequisites:
 * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) including Python
-* install the Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.02 (e.g. version 1.8), preferably 64 bits 
+* install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.02 (e.g. version 1.8), preferably 64 bits 
 * get [Delft FEWS 2017.02](https://oss.deltares.nl/web/delft-fews) 
 * get these demo data
 
@@ -25,11 +28,11 @@ Setup (typical setup of a Delft-FEWS instance):
 
 ## Configuration overview:
 * time series data for import are provided in `ImportBackup` (01/01/2008 - 31/12/2012) 
-* available workflows: importTimeSeries, runUpdateLahnH and runForecastLahnH 
-* macro DemoLahnH bundles the workflows
+* available work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH 
+* macro DemoLahnH bundles the work flows
 
 ## Run the provided HydPy model via Delft-FEWS
 * set current system time to match the time line of the sample time series (01/01/2008 - 31/12/2012) 
 * copy time series data from `ImportBackup` to `Import`
-* execute the provided workflows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH
+* execute the provided work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH
 * explore the data...  
