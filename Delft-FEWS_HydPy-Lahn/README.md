@@ -15,11 +15,11 @@ Prerequisites:
 Setup:
 * copy these demo data to your file system
 * adapt file `global.properties` to your local conditions:
-  * PYTHON_PATH: path pointing to your local Python installation
+  * `PYTHON_PATH`: path pointing to your local Python installation
 * add the Delft-FEWS binaries to Delft-FEWS_HydPy-Lahn/bin
-* copy appropriate Delft-FEWS launcher EXE to Delft-FEWS_HydPy-Lahn and rename it according to the INI file to use (respect the installed Java version 32B vs. 64B)
+* copy appropriate Delft-FEWS launcher EXE to Delft-FEWS_HydPy-Lahn and rename it according to the INI file to be used (respect the installed Java version 32B vs. 64B)
 
   
 * adapt INI file   
-  * vm.location: path pointing to your local Java installation
+  * `vm.location`: path pointing to your local Java installation
   * further adaptions if wanted
