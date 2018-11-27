@@ -17,7 +17,8 @@ Setup (typical setup of a Delft-FEWS instance):
 * adapt the file `global.properties` to your local conditions:
   * `PYTHON_PATH`: path pointing to your local Python installation
 * add the Delft-FEWS binaries to the directory Delft-FEWS_HydPy-Lahn/bin
-* copy the appropriate Delft-FEWS launcher EXE to Delft-FEWS_HydPy-Lahn and rename it according to the INI file to be used (respect the installed Java version 32B vs. 64B)
+* copy the appropriate Delft-FEWS launcher EXE from bin/launcher/<OS/Java>/ to Delft-FEWS_HydPy-Lahn and rename it according to the INI file to be used (respect the installed Java version 32B vs. 64B)
+* also provide latest available Delft-FEWS patch (`fews-stable-<version>-<build>-patch.jar`)
 * adapt the INI file (_`FewsDemo_HydPy_Lahn_xVV.ini`)  
   * `vm.location`: path pointing to Java installation to be used
   * further adaptions if wanted
@@ -26,3 +27,9 @@ Setup (typical setup of a Delft-FEWS instance):
 * time series data for import are provided in `ImportBackup` (01/01/2008 - 31/12/2012) 
 * available workflows: importTimeSeries, runUpdateLahnH and runForecastLahnH 
 * macro DemoLahnH bundles the workflows
+
+## Run the provided HydPy model via Delft-FEWS
+* set current system time to match the time line of the sample time series (01/01/2008 - 31/12/2012) 
+* copy time series data from `ImportBackup` to `Import`
+* execute the provided workflows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH
+* explore the data...  
