@@ -18,6 +18,6 @@ Setup (typical setup of a Delft-FEWS instance):
   * `PYTHON_PATH`: path pointing to your local Python installation
 * add the Delft-FEWS binaries to the directory Delft-FEWS_HydPy-Lahn/bin
 * copy the appropriate Delft-FEWS launcher EXE to Delft-FEWS_HydPy-Lahn and rename it according to the INI file to be used (respect the installed Java version 32B vs. 64B)
-* adapt the INI file (_`FewsDemo_HydPy_Lahn_xXX.ini`)  
+* adapt the INI file (_`FewsDemo_HydPy_Lahn_xVV.ini`)  
   * `vm.location`: path pointing to Java installation to be used
   * further adaptions if wanted
