@@ -7,11 +7,11 @@ Delft-FEWS sample configuration for a HydPy model at the river Lahn in Germany.
 
 ## Installation
 Prerequisites:
-* [HydPy framework] (../) including Python
-* [Delft FEWS 2017.02] (https://oss.deltares.nl/web/delft-fews/) 
+* [HydPy framework](../) including Python
+* [Delft FEWS 2017.02](https://oss.deltares.nl/web/delft-fews) 
 * a suitable Java Runtime Environment (JRE) or Java Development Kit (JDK)
 
 
 
-* adapt file '''global.properties''' to your local conditions:
+* adapt file ´´´global.properties´´´ to your local conditions:
   * PYTHON_PATH: path pointing to your local Python installation
