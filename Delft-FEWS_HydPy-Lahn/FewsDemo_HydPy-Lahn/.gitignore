@@ -1,0 +1,7 @@
+/temp/
+/*.ini
+/log.txt*
+/*.jar
+/*.exe
+/*.log
+/running

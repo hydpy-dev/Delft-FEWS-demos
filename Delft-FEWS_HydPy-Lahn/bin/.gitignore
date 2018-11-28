@@ -1,0 +1,12 @@
+/launcher/
+/linux/
+/sources/
+/windows32/
+/windows64/
+/*.jar
+/*.txt
+/*.conf
+/*.msg
+/*.zip
+/*.manifest
+/*.gz
