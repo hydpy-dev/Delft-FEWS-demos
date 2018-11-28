@@ -6,7 +6,7 @@ Delft-FEWS sample configuration for a HydPy model for some catchments of the riv
 
 ## Getting started
 Prerequisites:
-* install the [HydPy framework](https://github.com/hydpy-dev/hydpy) including Python
+* install the [HydPy framework](https://github.com/hydpy-dev/hydpy) including Python (see [installation instructions](https://hydpy-dev.github.io/hydpy/install.html))
 * install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.02 (e.g. version 1.8), preferably 64 bits 
 * get [Delft FEWS 2017.02](https://oss.deltares.nl/web/delft-fews/download) 
 * get these demo data
