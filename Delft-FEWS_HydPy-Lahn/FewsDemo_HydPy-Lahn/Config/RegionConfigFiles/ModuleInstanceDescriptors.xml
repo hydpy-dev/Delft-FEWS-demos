@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleInstanceDescriptors xmlns="http://www.wldelft.nl/fews" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews ..\..\_Schemas\moduleInstanceDescriptors.xsd">
+    <moduleInstanceDescriptor id="importMeteoMeasurement">
+        <description>import meteo data: temperature and precipitation - measurement</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="importMeteoForecast">
+        <description>import meteo data: temperature and precipitation - forecast</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="importMeteoNorm">
+        <description>import long-term mean meteo data and disaggregate: temperature and evaporation</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="importGaugeMeasurement">
+        <description>import gauge measurements (for informative purposes)</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="LahnH">
+        <description>Dummy ModuleInstance for moduleDataSetFile / coldStateFile LahnH</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="runUpdateLahnH">
+        <description>run update LahnH</description>
+    </moduleInstanceDescriptor>
+    <moduleInstanceDescriptor id="runForecastLahnH">
+        <description>run forecast LahnH</description>
+    </moduleInstanceDescriptor>
+</moduleInstanceDescriptors>

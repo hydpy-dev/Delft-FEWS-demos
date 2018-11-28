@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explorer version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/explorer.xsd">
+    <description />
+    <systemInformation>
+        <description>demo system for integration of HydPy into Delft-FEWS, here HydPy-H for Lahn basin (tributary to the river Rhine in Germany)</description>
+        <systemCaption>$EXPLORER_SYSTEMCAPTION$</systemCaption>
+    </systemInformation>
+    <rollingBarrelOptions>
+        <type>not_automatic</type>
+    </rollingBarrelOptions>
+    <globalDatum>N.N.</globalDatum>
+    <map>
+        <geoDatum>WGS 1984</geoDatum>
+        <projection>mercator</projection>
+        <defaultExtent id="LahnH Basin">
+            <left>7.5</left>
+            <right>9.5</right>
+            <top>51.1</top>
+            <bottom>50.1</bottom>
+        </defaultExtent>
+        <scaleBarVisible>true</scaleBarVisible>
+        <northArrowVisible>true</northArrowVisible>
+        <labelsVisible>true</labelsVisible>
+        <backgroundColor>light sky blue</backgroundColor>
+        <layer id="Satellite">
+            <className>nl.wldelft.libx.openmap.GenericTileServerLayer</className>
+            <visible>false</visible>
+            <properties>
+                <string key="tileUrlPattern" value="http://h%RIGHT(QUAD_KEY,1)%.ortho.tiles.virtualearth.net/tiles/h%QUAD_KEY%.jpeg?g=1" />
+                <string key="cacheDir" value="$MAP_TILE_CACHE_FOLDER$/Satellite_Cache" />
+                <int key="minZoomLevel" value="2" />
+                <int key="maxZoomLevel" value="17" />
+                <int key="topZoomLevel" value="19" />
+                <int key="tileSize" value="256" />
+            </properties>
+        </layer>
+        <openStreetMapLayer id="Open Street Map">
+            <url>http://tile.openstreetmap.org</url>
+            <visible>false</visible>
+            <cacheDir>$MAP_TILE_CACHE_FOLDER$/OSM</cacheDir>
+        </openStreetMapLayer>
+        <wmsLayer id="srtmv4.1_s0_pyramidal_color">
+            <url>http://www.webservice-energy.org/mapserv/srtm?</url>
+            <wmsLayerName>srtmv4.1_s0_pyramidal_color</wmsLayerName>
+            <visible>true</visible>
+            <cacheDir>$MAP_TILE_CACHE_FOLDER$/WMSLayers/srtmv4.1_s0_pyramidal_color</cacheDir>
+        </wmsLayer>
+        <esriShapeLayer id="Catchments (LahnH)">
+            <description>catchments</description>
+            <file>LahnH_subbasins.shp</file>
+            <geoDatum>WGS 1984</geoDatum>
+            <visible>true</visible>
+            <lineColor>dark goldenrod1</lineColor>
+            <fillColor>dark goldenrod1</fillColor>
+            <opaquenessPercentage>30</opaquenessPercentage>
+            <lineWidth value="2" />
+        </esriShapeLayer>
+        <esriShapeLayer id="Rivers">
+            <description>Rivers</description>
+            <file>Main_Rivers_Rhine_CCM21.shp</file>
+            <geoDatum>WGS 1984</geoDatum>
+            <visible>true</visible>
+            <lineColor>blue</lineColor>
+            <lineWidth maxScale="10000" value="10" />
+            <lineWidth maxScale="100000" value="5" />
+            <lineWidth maxScale="180000" value="2" />
+            <lineWidth maxScale="750000" value="1" />
+        </esriShapeLayer>
+    </map>
+    <explorerTasks>
+        <explorerTask name="Data Display">
+            <iconFile>graph.gif</iconFile>
+            <mnemonic>D</mnemonic>
+            <taskClass>nl.wldelft.fews.gui.plugin.timeseries.EditorTimeSeriesDialog</taskClass>
+            <toolbarTask>true</toolbarTask>
+            <menubarTask>true</menubarTask>
+            <allowMultipleInstances>true</allowMultipleInstances>
+            <accelerator>ctrl D</accelerator>
+            <doubleClickLocationEnabled>false</doubleClickLocationEnabled>
+            <loadAtStartup>true</loadAtStartup>
+        </explorerTask>
+        <explorerTask name="Manual Forecast">
+            <iconFile>""</iconFile>
+            <mnemonic>M</mnemonic>
+            <taskClass>nl.wldelft.fews.gui.plugin.manualforecast.ManualForecastDialog</taskClass>
+            <toolbarTask>true</toolbarTask>
+            <menubarTask>true</menubarTask>
+        </explorerTask>
+        <!-- <explorerTask name="System Monitor">
+            <iconFile>sysmon.png</iconFile>
+            <mnemonic>S</mnemonic>
+            <taskClass>nl.wldelft.fews.gui.plugin.systemmonitor.SystemMonitorDialog</taskClass>
+            <toolbarTask>false</toolbarTask>
+            <menubarTask>true</menubarTask>
+            <accelerator>ctrl S</accelerator>
+        </explorerTask> -->
+        <explorerTask name="Forecast Management">
+            <iconFile>""</iconFile>
+            <mnemonic>V</mnemonic>
+            <taskClass>nl.wldelft.fews.gui.plugin.forecast.ForecastDialog</taskClass>
+            <toolbarTask>true</toolbarTask>
+            <menubarTask>true</menubarTask>
+        </explorerTask>
+      <!--   <explorerTask name="Database Lister">
+            <iconFile>database.png</iconFile>
+            <mnemonic>L</mnemonic>
+            <predefinedDisplay>time series lister</predefinedDisplay>
+            <toolbarTask>false</toolbarTask>
+            <menubarTask>true</menubarTask>
+            <accelerator>ctrl L</accelerator>
+            <toolWindow>false</toolWindow>
+            <loadAtStartup>false</loadAtStartup>
+        </explorerTask> -->
+    </explorerTasks>
+    <statusBarConfig>
+        <description>Standard date-time format</description>
+        <dateTimeFormat>HH:mm:ss</dateTimeFormat>
+        <timeGMT>true</timeGMT>
+        <timeCurrent>true</timeCurrent>
+        <timeLastRefresh>true</timeLastRefresh>
+        <statusOfSystem>true</statusOfSystem>
+        <mouseCoordinates>true</mouseCoordinates>
+        <userName>true</userName>
+    </statusBarConfig>
+    <dateTime>
+        <timeZoneOffset>+01:00</timeZoneOffset>
+        <dateTimeFormat>dd-MM-yyyy HH:mm:ss</dateTimeFormat>
+        <cardinalTimeStep unit="hour" />
+    </dateTime>
+    <logPanelConfig>
+        <clientFilter>
+            <clientId>Stand alone</clientId>
+            <logFilter>
+                <level>INFO</level>
+                <eventType>system</eventType>
+            </logFilter>
+            <logFilter>
+                <level>INFO</level>
+                <eventType>debug</eventType>
+            </logFilter>
+        </clientFilter>
+        <clientFilter>
+            <clientId>Operator Client</clientId>
+            <logFilter>
+                <level>INFO</level>
+                <eventType>system</eventType>
+            </logFilter>
+            <logFilter>
+                <level>INFO</level>
+                <eventType>debug</eventType>
+            </logFilter>
+        </clientFilter>
+    </logPanelConfig>
+    <panelSizes>
+        <loggingPanelSize>5</loggingPanelSize>
+        <listsPanelSize>22</listsPanelSize>
+        <filterListSize>29</filterListSize>
+        <locationListSize>45</locationListSize>
+        <parameterListSize>25</parameterListSize>
+        <forecastListSize>5</forecastListSize>
+    </panelSizes>
+    <panelHeaderLabels>
+        <filterPanelHeader>Data sources</filterPanelHeader>
+        <locationPanelHeader>Locations</locationPanelHeader>
+        <parameterPanelHeader>Parameters</parameterPanelHeader>
+        <forecastPanelHeader>Simulations</forecastPanelHeader>
+    </panelHeaderLabels>
+    <notification enabled="true" />
+    <fileMenu>
+        <exportTimeSeries visible="true" />
+    </fileMenu>
+</explorer>

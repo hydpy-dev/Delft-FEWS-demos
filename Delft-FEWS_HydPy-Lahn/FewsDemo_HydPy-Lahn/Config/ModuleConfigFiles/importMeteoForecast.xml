@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesImportRun.xsd">
+    <import>
+        <general>
+            <importType>csv</importType>
+            <folder>$IMPORT_FOLDER$</folder>
+            <fileNamePatternFilter>*Forecast.csv</fileNamePatternFilter>
+            <idMapId>IdImport_LahnH_CSV</idMapId>
+            <missingValue>-999</missingValue>
+            <importTimeZone>
+                <timeZoneOffset>+01:00</timeZoneOffset>
+            </importTimeZone>
+        </general>
+        <timeSeriesSet>
+            <moduleInstanceId>importMeteoForecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>P.f</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" />
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>1</synchLevel>
+        </timeSeriesSet>
+        <timeSeriesSet>
+            <moduleInstanceId>importMeteoForecast</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>T.f</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external forecasting</timeSeriesType>
+            <timeStep unit="hour" />
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>1</synchLevel>
+        </timeSeriesSet>
+    </import>
+</timeSeriesImportRun>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/idMap.xsd" version="1.1">
+    <parameter external="input_p" internal="P.m" />
+    <parameter external="input_p" internal="P.f" />
+    <parameter external="input_t" internal="T.m" />
+    <parameter external="input_t" internal="T.f" />
+    <parameter external="input_epn" internal="EPN" />
+    <parameter external="input_tn" internal="TN" />
+    <locationIdPattern internalLocationPattern="*" externalLocationPattern="land_*" internalLocationSet="LahnH_subbasins" />
+</idMap>

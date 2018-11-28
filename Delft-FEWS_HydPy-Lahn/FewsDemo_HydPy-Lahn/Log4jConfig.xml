@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  <appender name="systemMonitorSynchPanel" class="nl.wldelft.fews.gui.plugin.systemmonitor.SynchLogPanelLogAppender">
+    <param name="level" value="DEBUG" />
+  </appender>
+  <appender name="explorerLogPanel" class="nl.wldelft.fews.gui.explorer.ExplorerLoggingPanelLogAppender">
+    <param name="level" value="INFO" />
+  </appender>
+  <appender name="explorerAcknowladgeIcon" class="nl.wldelft.fews.gui.explorer.FewsExplorerAcknowladgeIconLogAppender">
+    <param name="level" value="INFO" />
+  </appender>
+  <appender name="dataStoreLogEntriesTable" class="nl.wldelft.fews.system.data.tables.LogEntriesTableLogAppender">
+    <param name="level" value="INFO" />
+  </appender>
+  <appender name="splashScreen" class="nl.wldelft.fews.gui.explorer.LoggingSplashScreenLogAppender">
+    <param name="level" value="INFO" />
+  </appender>
+  <appender name="defaultLogFile" class="org.apache.log4j.FileAppender">
+    <param name="File" value="${log.file.path}" />
+    <param name="Append" value="false" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <!-- [Date] Priority - category - Message\n -->
+      <param name="ConversionPattern" value="[%d] %p - %C{1}.%M - %m%n" />
+    </layout>
+  </appender>
+  <appender name="workflowNavigatorLogPanel" class="nl.wldelft.fews.gui.plugin.workflownavigator.WorkflowNavigatorLogAppender">
+    <param name="level" value="DEBUG" />
+  </appender>
+  <category name="nl.wldelft.fews.system.synch" additivity="false">
+    <priority value="DEBUG" />
+    <appender-ref ref="systemMonitorSynchPanel" />
+    <appender-ref ref="defaultLogFile" />
+    <appender-ref ref="explorerAcknowladgeIcon" />
+  </category>
+  <category name="nl.wldelft.fews.system.synch.SynchTask" additivity="false">
+    <priority value="DEBUG" />
+    <appender-ref ref="explorerLogPanel" />
+    <appender-ref ref="defaultLogFile" />
+  </category>
+  <category name="org.jboss" additivity="false">
+    <priority value="DEBUG" />
+    <appender-ref ref="defaultLogFile" />
+  </category>
+  <category name="org.springframework" additivity="false">
+    <priority value="WARN" />
+    <appender-ref ref="explorerLogPanel" />
+    <appender-ref ref="defaultLogFile" />
+    <appender-ref ref="systemMonitorSynchPanel" />
+  </category>
+  <category name="nl.wldelft.fews.gui.plugin.workflownavigator" additivity="false">
+    <priority value="DEBUG" />
+    <appender-ref ref="workflowNavigatorLogPanel" />
+    <appender-ref ref="defaultLogFile" />
+  </category>
+  <root>
+    <priority value="DEBUG" />
+    <appender-ref ref="defaultLogFile" />
+    <appender-ref ref="splashScreen" />
+    <appender-ref ref="explorerLogPanel" />
+    <appender-ref ref="explorerAcknowladgeIcon" />
+    <appender-ref ref="dataStoreLogEntriesTable" />
+  </root>
+</log4j:configuration>

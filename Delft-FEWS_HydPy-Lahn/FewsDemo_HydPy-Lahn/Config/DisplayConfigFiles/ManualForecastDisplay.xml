@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manualForecastDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews d:\nffs\Implementation\Software\java\xml-schemas\manualForecastDisplay.xsd">
+	<runningPredefined>
+		<directory>%REGION_HOME%/Config/BatchRuns</directory>
+		<buttonVisible>true</buttonVisible>
+	</runningPredefined>
+</manualForecastDisplay>

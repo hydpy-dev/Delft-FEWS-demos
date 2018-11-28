@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflowDescriptors xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflowDescriptors.xsd" version="1.0">
+    <workflowDescriptor id="importTimeSeries" forecast="false" visible="true" name="import time series">
+        <description>import time series data: measured and forecasted temperature and precipitation; long-term mean temperature and evaporation, gauge discharge measurements</description>
+    </workflowDescriptor>
+    <workflowDescriptor id="runUpdateLahnH" forecast="true" visible="true" name="run update LahnH">
+        <description>run update LahnH</description>
+    </workflowDescriptor>
+    <workflowDescriptor id="runForecastLahnH" forecast="true" visible="true" name="run forecast LahnH">
+        <description>run forecast LahnH</description>
+    </workflowDescriptor>
+</workflowDescriptors>

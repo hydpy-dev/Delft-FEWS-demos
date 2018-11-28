@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<displayGroups version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/displayGroups.xsd" xmlns="http://www.wldelft.nl/fews">
+    <description />
+    <plot id="LahnH">
+        <subplot>
+            <timeSeriesSet>
+                <moduleInstanceId>importGaugeMeasurement</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>Q.m</parameterId>
+                <locationSetId>LahnH_gauges</locationSetId>
+                <timeSeriesType>external historical</timeSeriesType>
+                <timeStep unit="hour" />
+                <relativeViewPeriod unit="day" start="-8" end="3" />
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>runUpdateLahnH</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>Q.ur</parameterId>
+                <locationSetId>LahnH_gauges</locationSetId>
+                <timeSeriesType>simulated historical</timeSeriesType>
+                <timeStep unit="hour" />
+                <relativeViewPeriod unit="day" start="-8" end="3" />
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+            <timeSeriesSet>
+                <moduleInstanceId>runForecastLahnH</moduleInstanceId>
+                <valueType>scalar</valueType>
+                <parameterId>Q.fr</parameterId>
+                <locationSetId>LahnH_gauges</locationSetId>
+                <timeSeriesType>simulated forecasting</timeSeriesType>
+                <timeStep unit="hour" />
+                <relativeViewPeriod unit="day" start="-8" end="3" />
+                <readWriteMode>read only</readWriteMode>
+            </timeSeriesSet>
+        </subplot>
+    </plot>
+    <displayGroup id="LahnH" name="LahnH">
+        <singleLocationDisplays>
+            <relativeViewPeriod unit="day" start="-8" end="3" />
+            <locationSetId>LahnH_gauges</locationSetId>
+            <plotId>LahnH</plotId>
+        </singleLocationDisplays>
+    </displayGroup>
+</displayGroups>

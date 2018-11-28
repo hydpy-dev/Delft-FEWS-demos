@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemMonitorDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/systemMonitorDisplay.xsd">
+    <description>Configuration of the import status tab of the system monitor</description>
+    <importStatus>
+        <tabName>Import Status</tabName>
+        <defaultTimeThreshold>
+            <timeThreshold>
+                <periodLength value="0" unit="second" />
+                <color>green</color>
+            </timeThreshold>
+            <timeThreshold>
+                <periodLength value="6" unit="hour" />
+                <color>yellow</color>
+            </timeThreshold>
+            <timeThreshold>
+                <periodLength value="12" unit="hour" />
+                <color>orange</color>
+            </timeThreshold>
+            <timeThreshold>
+                <periodLength value="24" unit="hour" />
+                <color>red</color>
+            </timeThreshold>
+        </defaultTimeThreshold>
+        <extraTimeThreshold>
+            <dataFeedId>ZRXP</dataFeedId>
+            <timeThreshold>
+                <periodLength value="0" unit="second" />
+                <color>green</color>
+            </timeThreshold>
+            <timeThreshold>
+                <periodLength value="1" unit="hour" />
+                <color>white</color>
+            </timeThreshold>
+        </extraTimeThreshold>
+    </importStatus>
+</systemMonitorDisplay>

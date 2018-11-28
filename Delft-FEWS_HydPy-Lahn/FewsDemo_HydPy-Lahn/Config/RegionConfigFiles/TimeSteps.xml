@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSteps xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSteps.xsd">
+	<timeStep id="dailyCET" times="00:00" timeZone="GMT+1:00"/>
+</timeSteps>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/generalAdapterRun.xsd">
+  <general>
+    <description>LahnH update run</description>
+    <rootDir>%REGION_HOME%/Modules</rootDir>
+    <workDir>%ROOT_DIR%/HydPy</workDir>
+    <exportDir>%WORK_DIR%/LahnH</exportDir>
+    <!-- corresponds to internal ZIP structure -->
+    <exportDataSetDir>%WORK_DIR%/LahnH</exportDataSetDir>
+    <exportIdMap>IdExport_LahnH</exportIdMap>
+    <importDir>%WORK_DIR%/LahnH/series</importDir>
+    <importIdMap>IdImport_LahnH_Update</importIdMap>
+    <dumpFileDir>%REGION_HOME%/DumpFiles</dumpFileDir>
+    <dumpDir>%WORK_DIR%</dumpDir>
+    <diagnosticFile>%WORK_DIR%/LahnH/_pi/diag_general.xml</diagnosticFile>
+    <startDateTimeFormat>yyyy-MM-dd'T'HH:mm:ssZ</startDateTimeFormat>
+    <endDateTimeFormat>yyyy-MM-dd'T'HH:mm:ssZ</endDateTimeFormat>
+  </general>
+  <activities>
+    <startUpActivities>
+      <purgeActivity>
+        <filter>%REGION_HOME%/Modules/HydPy/*.log</filter>
+      </purgeActivity>
+      <purgeActivity>
+        <filter>%REGION_HOME%/Modules/HydPy/LahnH/conditions/*</filter>
+      </purgeActivity>
+      <purgeActivity>
+        <filter>%REGION_HOME%/Modules/HydPy/LahnH/series/*</filter>
+      </purgeActivity>
+    </startUpActivities>
+    <exportActivities>
+      <exportStateActivity>
+        <moduleInstanceId>runUpdateLahnH</moduleInstanceId>
+        <stateExportDir>%WORK_DIR%/LahnH/conditions/</stateExportDir>
+        <stateSelection>
+          <warmState>
+            <stateSearchPeriod unit="day" start="-8" end="-1" />
+          </warmState>
+        </stateSelection>
+      </exportStateActivity>
+      <exportDataSetActivity>
+        <moduleInstanceId>LahnH</moduleInstanceId>
+      </exportDataSetActivity>
+      <exportNetcdfActivity>
+        <exportFile>series/input/hland_v1_input_p.nc</exportFile>
+        <timeSeriesSets>
+          <timeSeriesSet>
+            <moduleInstanceId>importMeteoMeasurement</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>P.m</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <relativeViewPeriod unit="day" start="-8" end="0" />
+            <readWriteMode>read only</readWriteMode>
+          </timeSeriesSet>
+        </timeSeriesSets>
+      </exportNetcdfActivity>
+      <exportNetcdfActivity>
+        <exportFile>series/input/hland_v1_input_t.nc</exportFile>
+        <timeSeriesSets>
+          <timeSeriesSet>
+            <moduleInstanceId>importMeteoMeasurement</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>T.m</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <relativeViewPeriod unit="day" start="-8" end="0" />
+            <readWriteMode>read only</readWriteMode>
+          </timeSeriesSet>
+        </timeSeriesSets>
+      </exportNetcdfActivity>
+      <exportNetcdfActivity>
+        <exportFile>series/input/hland_v1_input_epn.nc</exportFile>
+        <timeSeriesSets>
+          <timeSeriesSet>
+            <moduleInstanceId>importMeteoNorm</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>EPN</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <relativeViewPeriod unit="day" start="-8" end="0" />
+            <readWriteMode>read only</readWriteMode>
+          </timeSeriesSet>
+        </timeSeriesSets>
+      </exportNetcdfActivity>
+      <exportNetcdfActivity>
+        <exportFile>series/input/hland_v1_input_tn.nc</exportFile>
+        <timeSeriesSets>
+          <timeSeriesSet>
+            <moduleInstanceId>importMeteoNorm</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>TN</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <relativeViewPeriod unit="day" start="-8" end="0" />
+            <readWriteMode>read only</readWriteMode>
+          </timeSeriesSet>
+        </timeSeriesSets>
+      </exportNetcdfActivity>
+    </exportActivities>
+    <executeActivities>
+      <executeActivity>
+        <command>
+          <executable>$PYTHON_PATH$/python.exe</executable>
+        </command>
+        <arguments>
+          <argument>$PYTHON_PATH$/Lib/site-packages/hydpy/exe/hyd.py</argument>
+          <argument>xml_replace</argument>
+          <argument>LahnH/config</argument>
+          <argument>firstdate=%START_DATE_TIME%</argument>
+          <argument>lastdate=%END_DATE_TIME%</argument>
+          <argument>stepsize=1h</argument>
+          <argument>logfile=updateConfig.log</argument>
+          <argument>logstyle=prefixed</argument>
+        </arguments>
+        <logFile>
+          <file>HydPy/updateConfig.log</file>
+          <errorLinePattern>error: *</errorLinePattern>
+          <warningLinePattern>warning: *</warningLinePattern>
+          <infoLinePattern>info: *</infoLinePattern>
+        </logFile>
+        <timeOut>24000000</timeOut>
+        <ignoreDiagnostics>true</ignoreDiagnostics>
+      </executeActivity>
+      <executeActivity>
+        <command>
+          <executable>$PYTHON_PATH$/python.exe</executable>
+        </command>
+        <arguments>
+          <argument>$PYTHON_PATH$/Lib/site-packages/hydpy/exe/hyd.py</argument>
+          <argument>run_simulation</argument>
+          <argument>LahnH</argument>
+          <argument>config.xml</argument>
+          <argument>logfile=runUpdateLahnH.log</argument>
+          <argument>logstyle=prefixed</argument>
+        </arguments>
+        <logFile>
+          <file>HydPy/runUpdateLahnH.log</file>
+          <errorLinePattern>error: *</errorLinePattern>
+          <warningLinePattern>warning: *</warningLinePattern>
+          <infoLinePattern>info: *</infoLinePattern>
+        </logFile>
+        <timeOut>24000000</timeOut>
+        <ignoreDiagnostics>true</ignoreDiagnostics>
+      </executeActivity>
+    </executeActivities>
+    <importActivities>
+      <importStateActivity>
+        <stateImportDir>%WORK_DIR%/LahnH/conditions</stateImportDir>
+        <stateFile>
+          <importFile>init_end.zip</importFile>
+          <relativeExportFile>init_start.zip</relativeExportFile>
+        </stateFile>
+      </importStateActivity>
+      <importNetcdfActivity>
+        <description>gauges</description>
+        <importFile>node/node_sim_q.nc</importFile>
+        <timeSeriesSets>
+          <timeSeriesSet>
+            <moduleInstanceId>runUpdateLahnH</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>Q.ur</parameterId>
+            <locationSetId>LahnH_subbasins</locationSetId>
+            <timeSeriesType>simulated historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <readWriteMode>add originals</readWriteMode>
+          </timeSeriesSet>
+        </timeSeriesSets>
+      </importNetcdfActivity>
+    </importActivities>
+  </activities>
+</generalAdapterRun>

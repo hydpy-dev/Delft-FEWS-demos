@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesImportRun.xsd" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <import>
+        <general>
+            <importType>Wiski</importType>
+            <folder>$IMPORT_FOLDER$</folder>
+            <fileNamePatternFilter>*.zrx</fileNamePatternFilter>
+            <idMapId>IdImport_LahnH_ZRXP</idMapId>
+            <missingValue>-777</missingValue>
+            <importTimeZone>
+                <timeZoneOffset>+01:00</timeZoneOffset>
+            </importTimeZone>
+        </general>
+        <timeSeriesSet>
+            <moduleInstanceId>importGaugeMeasurement</moduleInstanceId>
+            <valueType>scalar</valueType>
+            <parameterId>Q.m</parameterId>
+            <locationSetId>LahnH_gauges</locationSetId>
+            <timeSeriesType>external historical</timeSeriesType>
+            <timeStep unit="hour" />
+            <readWriteMode>add originals</readWriteMode>
+            <synchLevel>1</synchLevel>
+        </timeSeriesSet>
+    </import>
+</timeSeriesImportRun>

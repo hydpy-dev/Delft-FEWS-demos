@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterGroups version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/parameters.xsd">
+    <parameterGroup id="discharge">
+        <parameterType>instantaneous</parameterType>
+        <unit>m3/s</unit>
+        <parameter id="Q.m" name="discharge measured (Q.m)">
+            <shortName>Q.m</shortName>
+        </parameter>
+        <parameter id="Q.ur" name="discharge update run (Q.ur)">
+            <shortName>Q.ur</shortName>
+        </parameter>
+        <parameter id="Q.fr" name="discharge forecast run (Q.fr)">
+            <shortName>Q.fr</shortName>
+        </parameter>
+    </parameterGroup>
+    <parameterGroup id="evaporation">
+        <parameterType>accumulative</parameterType>
+        <unit>mm</unit>
+        <valueResolution>0.0001</valueResolution>
+        <parameter id="EPN" name="long-term mean evaporation (EPN)">
+            <shortName>EPN</shortName>
+        </parameter>
+    </parameterGroup>
+    <parameterGroup id="precipitation">
+        <parameterType>accumulative</parameterType>
+        <unit>mm</unit>
+        <valueResolution>0.01</valueResolution>
+        <parameter id="P.m" name="precipitation measured (P.m)">
+            <shortName>P.m</shortName>
+        </parameter>
+        <parameter id="P.f" name="precipitation forcast (P.f)">
+            <shortName>P.f</shortName>
+        </parameter>
+    </parameterGroup>
+    <parameterGroup id="Temperature">
+        <parameterType>instantaneous</parameterType>
+        <unit>oC</unit>
+        <valueResolution>0.1</valueResolution>
+        <parameter id="T.m" name="temperature measured (T.m)">
+            <shortName>T.m</shortName>
+        </parameter>
+        <parameter id="T.f" name="temperature forcast (T.f)">
+            <shortName>T.f</shortName>
+        </parameter>
+        <parameter id="TN" name="long-term mean temperature (TN)">
+            <shortName>TN</shortName>
+        </parameter>
+    </parameterGroup>
+</parameterGroups>

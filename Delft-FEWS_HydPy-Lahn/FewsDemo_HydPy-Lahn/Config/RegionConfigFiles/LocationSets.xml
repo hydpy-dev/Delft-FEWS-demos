@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locationSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/locationSets.xsd">
+    <locationSet id="LahnH_gauges">
+        <esriShapeFile>
+            <file>LahnH_hydrostations.shp</file>
+            <geoDatum>WGS 1984</geoDatum>
+            <id>%WISKI_ID%</id>
+            <name>%NAME%</name>
+            <shortName>%NAME%</shortName>
+            <x>%LON%</x>
+            <y>%LAT%</y>
+            <z>%ALTITUDE%</z>
+            <attribute id="WISKI_ID">
+                <description>WISKI id</description>
+                <text>%WISKI_ID%</text>
+            </attribute>
+        </esriShapeFile>
+    </locationSet>
+    <locationSet id="LahnH_subbasins">
+        <esriShapeFile>
+            <file>LahnH_subbasins.shp</file>
+            <geoDatum>WGS 1984</geoDatum>
+            <id>%NAME%</id>
+            <name>%DISPLAY%</name>
+            <shortName>%NAME%</shortName>
+            <x>%LON%</x>
+            <y>%LAT%</y>
+            <z>%MEANALT%</z>
+            <attribute id="NAME">
+                <description>name</description>
+                <text>%NAME%</text>
+            </attribute>
+        </esriShapeFile>
+    </locationSet>
+</locationSets>

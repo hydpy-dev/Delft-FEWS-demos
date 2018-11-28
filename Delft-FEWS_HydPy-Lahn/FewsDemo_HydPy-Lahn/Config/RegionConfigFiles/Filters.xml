@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/filters.xsd" xmlns="http://www.wldelft.nl/fews">
+  <filter id="meteo" name="meteo">
+    <child foreignKey="precipitationMeasurement" />
+    <child foreignKey="precipitationForecast" />
+    <child foreignKey="temperatureMeasurement" />
+    <child foreignKey="temperatureForecast" />
+  </filter>
+  <filter id="normMeteo" name="long-term mean meteo">
+    <child foreignKey="normEvaporation" />
+    <child foreignKey="normTemperature" />
+  </filter>
+  <filter id="discharge" name="discharge">
+    <child foreignKey="dischargeMeasurement" />
+    <child foreignKey="dischargeUpdate" />
+    <child foreignKey="dischargeForecast" />
+  </filter>
+  <filter id="precipitationMeasurement" name="precipitationMeasurement">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoMeasurement</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>P.m</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="0" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="precipitationForecast" name="precipitationForecast">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoForecast</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>P.f</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external forecasting</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="0" end="3" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="temperatureMeasurement" name="temperatureMeasurement">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoMeasurement</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>T.m</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="0" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="temperatureForecast" name="temperatureForecast">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoForecast</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>T.f</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external forecasting</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="0" end="3" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="normTemperature" name="long-term mean temperature">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoNorm</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>TN</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="3" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="normEvaporation" name="long-term mean evaporation">
+    <timeSeriesSet>
+      <moduleInstanceId>importMeteoNorm</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>EPN</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="3" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="dischargeMeasurement" name="measurement">
+    <timeSeriesSet>
+      <moduleInstanceId>importGaugeMeasurement</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>Q.m</parameterId>
+      <locationSetId>LahnH_gauges</locationSetId>
+      <timeSeriesType>external historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="3" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="dischargeUpdate" name="update run">
+    <timeSeriesSet>
+      <moduleInstanceId>runUpdateLahnH</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>Q.ur</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>simulated historical</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="-8" end="0" />
+      <readWriteMode>read only</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+  <filter id="dischargeForecast" name="forecast run">
+    <timeSeriesSet>
+      <moduleInstanceId>runForecastLahnH</moduleInstanceId>
+      <valueType>scalar</valueType>
+      <parameterId>Q.fr</parameterId>
+      <locationSetId>LahnH_subbasins</locationSetId>
+      <timeSeriesType>simulated forecasting</timeSeriesType>
+      <timeStep unit="hour" />
+      <relativeViewPeriod unit="day" start="0" end="3" />
+      <readWriteMode>read complete forecast</readWriteMode>
+    </timeSeriesSet>
+  </filter>
+</filters>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskPropertiesPredefined xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/taskPropertiesPredefined.xsd">
+  <!-- run complete workflow for LahnH -->
+  <taskProperties>
+    <workflowId>importTimeSeries</workflowId>
+    <taskSelection>
+      <singleTask>
+        <time0>2010-06-02T06:00:00.000+01:00</time0>
+      </singleTask>
+    </taskSelection>
+    <forecastPriority>Normal</forecastPriority>
+    <makeStateCurrent>false</makeStateCurrent>
+  </taskProperties>
+  <taskProperties>
+    <workflowId>runUpdateLahnH</workflowId>
+    <taskSelection>
+      <singleTask>
+        <time0>2010-06-02T06:00:00.000+01:00</time0>
+      </singleTask>
+    </taskSelection>
+    <forecastPriority>Normal</forecastPriority>
+    <makeForcastCurrent>true</makeForcastCurrent>
+    <makeStateCurrent>true</makeStateCurrent>
+  </taskProperties>
+  <taskProperties>
+    <workflowId>runForecastLahnH</workflowId>
+    <taskSelection>
+      <singleTask>
+        <time0>2010-06-02T06:00:00.000+01:00</time0>
+      </singleTask>
+    </taskSelection>
+    <forecastPriority>Normal</forecastPriority>
+    <makeForcastCurrent>true</makeForcastCurrent>
+    <makeStateCurrent>true</makeStateCurrent>
+  </taskProperties>
+</taskPropertiesPredefined>

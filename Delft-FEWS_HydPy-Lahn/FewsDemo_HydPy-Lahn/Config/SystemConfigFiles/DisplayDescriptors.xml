@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<displayDescriptors xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/displayDescriptors.xsd" version="1.0">
+    <displayDescriptor id="SystemMonitorDisplay">
+        <description>SystemMonitorDisplay</description>
+        <className>nl.wldelft.fews.gui.plugin.systemmonitor.SystemMonitorDialog</className>
+    </displayDescriptor>
+    <displayDescriptor id="ManualForecastDisplay">
+        <className>nl.wldelft.fews.gui.plugin.manualforecast.ManualForecastDialog</className>
+    </displayDescriptor>
+</displayDescriptors>

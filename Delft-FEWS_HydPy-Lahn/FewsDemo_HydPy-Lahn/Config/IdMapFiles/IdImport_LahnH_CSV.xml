@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idMap version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/idMap.xsd">
+    <function internalLocationSet="LahnH_subbasins" externalLocationFunction="@NAME@" internalParameter="P.m" externalParameterFunction="P.im" />
+    <function internalLocationSet="LahnH_subbasins" externalLocationFunction="@NAME@" internalParameter="T.m" externalParameterFunction="T.im" />
+    <function internalLocationSet="LahnH_subbasins" externalLocationFunction="@NAME@" internalParameter="P.f" externalParameterFunction="P.if" />
+    <function internalLocationSet="LahnH_subbasins" externalLocationFunction="@NAME@" internalParameter="T.f" externalParameterFunction="T.if" />
+</idMap>
