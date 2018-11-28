@@ -1,21 +1,17 @@
 # Delft-FEWS HydPy-Lahn
 
-Delft-FEWS sample configuration for a HydPy model at the river Lahn in Germany.
-
-TODO: Info über Projekthistorie + BfG!
-TODO: info, wie man tatsächlich an FEWS kommt
+Delft-FEWS sample configuration for a HydPy model for some catchments of the river Lahn in Germany.
 
 ![Lahn overview](./_images/01_overview.png)
-
 
 ## Getting started
 Prerequisites:
 * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) including Python
 * install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.02 (e.g. version 1.8), preferably 64 bits 
-* get [Delft FEWS 2017.02](https://oss.deltares.nl/web/delft-fews) 
+* get [Delft FEWS 2017.02](https://oss.deltares.nl/web/delft-fews/download) 
 * get these demo data
 
-Setup (typical setup of a Delft-FEWS instance):
+Setup ([typical setup of a Delft-FEWS instance](https://publicwiki.deltares.nl/display/FEWSDOC/03+Creating+a+FEWS+Application+Directory)):
 * copy these demo data to your file system
 * adapt the file `global.properties` to your local conditions:
   * `PYTHON_PATH`: path pointing to your local Python installation
@@ -24,7 +20,7 @@ Setup (typical setup of a Delft-FEWS instance):
 * also provide latest available Delft-FEWS patch (`fews-stable-<version>-<build>-patch.jar`)
 * adapt the INI file (_`FewsDemo_HydPy_Lahn_xVV.ini`)  
   * `vm.location`: path pointing to Java installation to be used
-  * further adaptions if wanted
+  * further adaptions if wanted or needed
 
 ## Configuration overview
 * time series data for import are provided in `ImportBackup` (01/01/2008 - 31/12/2012) 
