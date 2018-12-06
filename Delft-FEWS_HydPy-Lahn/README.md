@@ -2,7 +2,7 @@
 
 Delft-FEWS sample configuration for a HydPy model for some catchments of the river Lahn in Germany.
 
-This 
+This demo of linking HydPy to Delft-FEWS results from a project of the German [Federal Institute of Hydrology](http://www.bafg.de) (BfG). 	
 
 BfG provides meteo data and geo data as a courtesy.
 
@@ -34,11 +34,11 @@ Setup ([typical setup of a Delft-FEWS instance](https://publicwiki.deltares.nl/d
 
 ## Configuration overview
 * time series data for import are provided in `ImportBackup` (01/01/2008 - 31/12/2012) 
-* available work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH 
+* available work flows are importTimeSeries, runUpdateLahnH and runForecastLahnH 
 * macro DemoLahnH bundles the work flows
 
 ## Run the provided HydPy model via Delft-FEWS
 * set current system time to match the time line of the sample time series (01/01/2008 - 31/12/2012) 
 * copy time series data from `ImportBackup` to `Import`
-* execute the provided work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH
+* execute the provided work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH and runForecastLahnH.
 * explore the data...  
