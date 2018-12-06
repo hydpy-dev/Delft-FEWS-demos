@@ -10,10 +10,11 @@
 /FewsDemo_HydPy-Lahn/*.log
 /FewsDemo_HydPy-Lahn/running
 
-/FewsDemo_HydPy-Lahn/_MapTileCache/OSM/
-/FewsDemo_HydPy-Lahn/_MapTileCache/Satellite_Cache/
 /FewsDemo_HydPy-Lahn/_MapTileCache/WMSLayers/
 /FewsDemo_HydPy-Lahn/Config/*.cbin
+/FewsDemo_HydPy-Lahn/Config/MapLayerFiles/eu_riv_30s*
+/FewsDemo_HydPy-Lahn/Config/MapLayerFiles/hydrosheds*.zip
+/FewsDemo_HydPy-Lahn/Config/MapLayerFiles/HydroSHEDS*.pdf
 /FewsDemo_HydPy-Lahn/DumpFiles/*.zip
 /FewsDemo_HydPy-Lahn/localDataStore/*.fdb
 /FewsDemo_HydPy-Lahn/localDataStore/*.cbin
