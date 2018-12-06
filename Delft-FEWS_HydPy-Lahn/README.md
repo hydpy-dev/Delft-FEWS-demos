@@ -2,7 +2,7 @@
 
 Delft-FEWS sample configuration for a HydPy model for some catchments of the river Lahn in Germany.
 
-This demo of linking HydPy to Delft-FEWS results from a project of the German [Federal Institute of Hydrology](http://www.bafg.de) (BfG). BfG also provides meteo data and geo data as a courtesy.
+This demo of linking Delft-FEWS to HydPy results from a project of the German [Federal Institute of Hydrology](http://www.bafg.de) (BfG). BfG also provides meteo data and geo data as a courtesy.
 
 ![Lahn overview](./_images/01_overview.png)
 
