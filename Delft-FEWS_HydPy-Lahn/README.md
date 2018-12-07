@@ -9,9 +9,9 @@ This demo of linking Delft-FEWS to HydPy results from a project of the German [F
 ## Getting started
 Prerequisites:
 * install [Python](https://www.python.org/). Use version 3.6 or 3.7. 
-  * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) itself: 
+  * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) itself by executing the following from the command line: 
     * pip install hydpy    
-  * add the libraries lxml and netCDF4 to your Python installation. These libraries are used by the LahnH model and are optional to HydPy. Install by executing the following from the command line: 
+  * add the libraries lxml and netCDF4 to your Python installation. These libraries are used by the LahnH model and are optional to HydPy.  
     * pip install lxml 
     * pip install netCDF4
 * install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.01 (e.g. version 1.8), preferably 64 bits 
@@ -35,7 +35,7 @@ Setup ([typical setup of a Delft-FEWS instance](https://publicwiki.deltares.nl/d
 * macro DemoLahnH bundles the work flows
 
 ## Run the provided HydPy model via Delft-FEWS
-* set current system time to match the time line of the sample time series (01/01/2008 - 31/12/2012) 
-* copy time series data from `ImportBackup` to `Import`
+* set the `Current system time` in Delft-FEWS  to match the time line of the sample time series (01/01/2008 - 31/12/2012) 
+* copy the time series data from `ImportBackup` to `Import`
 * execute the provided work flows: importTimeSeries, runUpdateLahnH and runForecastLahnH, don't forget to approve the forecast after running runUpdateLahnH and runForecastLahnH.
 * explore the data...  
