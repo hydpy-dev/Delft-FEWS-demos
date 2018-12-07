@@ -11,7 +11,7 @@ Prerequisites:
 * install [Python](https://www.python.org/). Use version 3.6 or 3.7. 
   * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) itself: 
     * pip install hydpy    
-  * additionally add lxml and netCDF4 to your Python installation by executing the following from the command line: 
+  * add the libraries lxml and netCDF4 to your Python installation by executing the following from the command line: 
     * pip install lxml 
     * pip install netCDF4
 * install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.01 (e.g. version 1.8), preferably 64 bits 
