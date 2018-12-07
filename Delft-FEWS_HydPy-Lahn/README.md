@@ -8,13 +8,12 @@ This demo of linking Delft-FEWS to HydPy results from a project of the German [F
 
 ## Getting started
 Prerequisites:
-* install [Python](https://www.python.org/). Currently the version 3.6 suits best the needs of HydPy. 
-  * additionally add lxml, netCDF4 and matplotlib to your Python installation by executing the following from the command line: 
-    * pip install lxml 
-    * pip install netCDF4
-    * pip install matplotlib 
+* install [Python](https://www.python.org/). Use version 3.6 or 3.7. 
   * install the [HydPy framework](https://github.com/hydpy-dev/hydpy) itself: 
     * pip install hydpy    
+  * additionally add lxml and netCDF4 to your Python installation by executing the following from the command line: 
+    * pip install lxml 
+    * pip install netCDF4
 * install a Java Runtime Environment (JRE) or Java Development Kit (JDK) suitable for Delft-FEWS 2017.01 (e.g. version 1.8), preferably 64 bits 
 * get [Delft-FEWS 2017.01](https://oss.deltares.nl/web/delft-fews/download) 
 * get these demo data
