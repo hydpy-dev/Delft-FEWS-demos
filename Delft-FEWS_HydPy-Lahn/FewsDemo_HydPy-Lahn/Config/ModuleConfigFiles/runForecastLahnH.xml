@@ -81,6 +81,7 @@
             <locationSetId>LahnH_subbasins</locationSetId>
             <timeSeriesType>external historical</timeSeriesType>
             <timeStep unit="hour" />
+            <cycle unit="year"/>
             <relativeViewPeriod unit="day" start="-3" end="3" startOverrulable="true" endOverrulable="true" />
             <readWriteMode>read only</readWriteMode>
           </timeSeriesSet>
@@ -96,6 +97,7 @@
             <locationSetId>LahnH_subbasins</locationSetId>
             <timeSeriesType>external historical</timeSeriesType>
             <timeStep unit="hour" />
+            <cycle unit="year"/>
             <relativeViewPeriod unit="day" start="-3" end="3" startOverrulable="true" endOverrulable="true" />
             <readWriteMode>read only</readWriteMode>
           </timeSeriesSet>
