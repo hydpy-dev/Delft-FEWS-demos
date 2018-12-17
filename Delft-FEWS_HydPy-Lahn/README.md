@@ -2,7 +2,7 @@
 
 A Delft-FEWS sample configuration for applying [HydPy-H](https://hydpy-dev.github.io/hydpy/HydPy-H.html) (HBV96) to the river Lahn.
 
-This demo of linking Delft-FEWS to HydPy results from a project of the German [Federal Institute of Hydrology](http://www.bafg.de) (BfG). The BfG also provides meteorological data and catchment geodata as a courtesy.
+This demo of linking Delft-FEWS to HydPy results from a project of the German [Federal Institute of Hydrology](http://www.bafg.de) (BfG). The BfG also provides meteorological observations for the subcatchments and catchment geodata as a courtesy. The observations were derived from station data of the [Deutscher Wetterdienst (DWD)](https://opendata.dwd.de/).
 
 The German River Lahn is a tributary to the Rhine. The following map shows the spatial configuration of the HydPy-H model. It consists of four subcatchments, each one with a river gauge (Marburg, Asslar, Leun, Kalkofen) at its outlet.
 
