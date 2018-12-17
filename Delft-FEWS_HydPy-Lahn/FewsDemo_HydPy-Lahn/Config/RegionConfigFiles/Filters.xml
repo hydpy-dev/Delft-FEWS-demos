@@ -11,7 +11,7 @@
     <child foreignKey="normTemperature" />
   </filter>
   <filter id="discharge" name="discharge">
-    <child foreignKey="dischargeMeasurement" />
+    <!-- <child foreignKey="dischargeMeasurement" /> -->
     <child foreignKey="dischargeUpdate" />
     <child foreignKey="dischargeForecast" />
   </filter>
@@ -89,7 +89,7 @@
       <readWriteMode>read only</readWriteMode>
     </timeSeriesSet>
   </filter>
-  <filter id="dischargeMeasurement" name="measurement">
+  <!-- <filter id="dischargeMeasurement" name="measurement">
     <timeSeriesSet>
       <moduleInstanceId>importGaugeMeasurement</moduleInstanceId>
       <valueType>scalar</valueType>
@@ -100,7 +100,7 @@
       <relativeViewPeriod unit="day" start="-8" end="3" />
       <readWriteMode>read only</readWriteMode>
     </timeSeriesSet>
-  </filter>
+  </filter> -->
   <filter id="dischargeUpdate" name="update run">
     <timeSeriesSet>
       <moduleInstanceId>runUpdateLahnH</moduleInstanceId>
